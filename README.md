@@ -10,4 +10,17 @@ swift coding challenges with HackingWithSwift
   <li> The STring "abcdefghijklmnopqrstuvwxyz" should return true</li>
   <li>“The string “AaBbCc” should return true</li>
 </ul>
+
+## Usage
+
+```swift
+func challenge1a(input: String) -> Bool {
+   var usedLetters = [Character]()
+   for letter in input {
+      if usedLetters.contains(letter) {
+         return false
+      }
+      usedLetters.append(letter)
+   }
+return true }
   
