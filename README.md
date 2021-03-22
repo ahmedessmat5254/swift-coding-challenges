@@ -11,7 +11,7 @@ swift coding challenges with HackingWithSwift
   <li>“The string “AaBbCc” should return true</li>
 </ul>
 
-### solution 
+### solution 1 
 
 ```swift
 func challenge1a(input: String) -> Bool {
@@ -23,4 +23,10 @@ func challenge1a(input: String) -> Bool {
       usedLetters.append(letter)
    }
 return true }
-  
+
+### solution 2 
+```swift
+func Challange1b(input: String) -> Bool {
+    return Set(input).count == input.count
+}
+
