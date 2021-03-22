@@ -30,3 +30,6 @@ func Challange1b(input: String) -> Bool {
     return Set(input).count == input.count
 }
 ```
+
+-----
+
