@@ -11,7 +11,7 @@ swift coding challenges with HackingWithSwift
   <li>“The string “AaBbCc” should return true</li>
 </ul>
 
-## Usage
+### solution 
 
 ```swift
 func challenge1a(input: String) -> Bool {
