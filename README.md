@@ -34,5 +34,22 @@ func Challange1b(input: String) -> Bool {
 -----
 
 ### Challenge 2 Is a String a palindrome ?
+Write a function that accepts a String as its only parameter, and returns true if the string
+reads the same when reversed, ignoring case.
+<ul> 
+  <li>The string “rotator” should return true. </li>
+  <li>The string “Rats live on no evil star” should return true. </li>
+  <li>The string “Never odd or even” should return false; even though the letters are the
+same in reverse the spaces are in different places. </li>
+  <li> The string “Hello, world” should return false because it reads “dlrow ,olleH”
+backwards.</li>
+</ul>
 
+#### solution 
 
+```swift
+func challenge2(input: String) -> Bool{
+    let lowercase = input.lowercased()
+    return input.reversed() == Array(lowercase)
+}
+```
