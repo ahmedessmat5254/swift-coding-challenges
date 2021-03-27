@@ -36,6 +36,7 @@ func Challange1b(input: String) -> Bool {
 ### Challenge 2 Is a String a palindrome ?
 Write a function that accepts a String as its only parameter, and returns true if the string
 reads the same when reversed, ignoring case.
+<p><b>Sample input and output</b></p>
 <ul> 
   <li>The string “rotator” should return true. </li>
   <li>The string “Rats live on no evil star” should return true. </li>
@@ -53,3 +54,14 @@ func challenge2(input: String) -> Bool{
     return input.reversed() == Array(lowercase)
 }
 ```
+### Challenge 3: Do two strings contain the same characters?
+Write a function that accepts two String parameters, and returns true if they contain the same characters in any order taking into account letter case.
+<p><b>Sample input and output</b></p>
+    • The strings “abca” and “abca” should return true.
+    • The strings “abc” and “cba” should return true.
+    • The strings “ a1 b2 ” and “b1 a2” should return true.
+    • The strings “abc” and “abca” should return false.
+    • The strings “abc” and “Abc” should return false.
+    • The strings “abc” and “cbAa” should return false.
+    
+    
