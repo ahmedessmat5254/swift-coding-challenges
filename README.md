@@ -54,14 +54,45 @@ func challenge2(input: String) -> Bool{
     return input.reversed() == Array(lowercase)
 }
 ```
+-----
 ### Challenge 3: Do two strings contain the same characters?
 Write a function that accepts two String parameters, and returns true if they contain the same characters in any order taking into account letter case.
 <p><b>Sample input and output</b></p>
-    • The strings “abca” and “abca” should return true.
-    • The strings “abc” and “cba” should return true.
-    • The strings “ a1 b2 ” and “b1 a2” should return true.
-    • The strings “abc” and “abca” should return false.
-    • The strings “abc” and “Abc” should return false.
-    • The strings “abc” and “cbAa” should return false.
+<ul>
+  <li> The strings “abca” and “abca” should return true</li>
+  <li> The strings “abc” and “cba” should return true</li>
+  <li>The strings “ a1 b2 ” and “b1 a2” should return true</li>
+  <li>The strings “abc” and “abca” should return false</li>
+  <li>The strings “abc” and “Abc” should return false</li>
+  <li> The strings “abc” and “cbAa” should return false</li>
+</ul>
+#### solution 1 
+
+```swift
+func challenge3a(string1: String, string2: String) -> Bool {
+     
+    var checkString = string2
+    
+    for letter in string1 {
+        if let index = checkString.firstIndex(of: letter) {
+            checkString.remove(at: index)
+        }else {
+            return false
+        }
+    }
+    return checkString.count == 0
+}
+```
+#### solution 2 
+```swift
+func challenge3b(string1: String, string2: String) -> Bool {
+    let array1 = Array(string1)
+    let array2 = Array(string2)
+    
+    return array1.count == array2.count && array1.sorted() == array2.sorted()
+}
+```
+------
+
     
     
