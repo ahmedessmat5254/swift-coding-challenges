@@ -94,6 +94,26 @@ func challenge3b(string1: String, string2: String) -> Bool {
 }
 ```
 ------
+### Challenge 4: Does one string contain another?
+Write your own version of the contains() method on String that ignores letter case, and
+without using the existing contains() method.
 
-    
+#### Sample input and output
+<ul>
+  <li> The code "Hello, world".fuzzyContains("Hello") should return true</li>
+  <li>The code "Hello, world".fuzzyContains("WORLD") should return true</li>
+  <li>The code "Hello, world".fuzzyContains("Goodbye") should return false. </li>
+</ul>
+ 
+ #### solution 
+
+```swift
+extension String {
+    func fuzzyContain(_ string: String) -> Bool{
+
+        return range(of: string, options: .caseInsensitive) != nil
+    }
+}
+```
+
     
