@@ -116,4 +116,51 @@ extension String {
 }
 ```
 
-    
+### Challenge 5: Does one string contain another?
+Write a function that accepts a string, and returns how many times a specific character appears,
+taking case into account.
+<b>Tip:</b> If you can solve this without using a for-in loop, you can consider it a Tricky challenge.
+
+
+#### Sample input and output
+<ul>
+  <li> The letter “a” appears twice in “The rain in Spain”.</li>
+  <li>The letter “i” appears four times in “Mississippi”.</li>
+  <li>The letter “i” appears three times in “Hacking with Swift”.</li>
+</ul>
+ 
+ #### solution 1 
+
+```swift
+func challenge5a(input: String, count: Character) -> Int {
+   var letterCount = 0
+   for letter in input {
+      if letter == count {
+         letterCount += 1
+      }
+}
+   return letterCount
+}
+```
+ #### solution 2
+
+```swift
+func challenge5b(input: String, count: Character) -> Int {
+   return input.reduce(0) {
+      $1 == count ? $0 + 1 : $0
+   }
+}
+```
+
+ #### solution 3
+
+```swift
+func challenge5c(input: String, count: String) -> Int {
+   let array = input.map { String($0) }
+   let counted = NSCountedSet(array: array)
+   return counted.count(for: count)
+}
+```
+
+
+
